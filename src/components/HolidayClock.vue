@@ -4,11 +4,15 @@
       <div class="time">{{ time }}</div>
       <div class="date">{{ date }}</div>
       <div class="timezone">{{ timezone }}</div>
+      <div class="timezone">{{ timezone }}</div>
+      <div class="timezone">{{ timezone }}</div>
     </div>
   </div>
 </template>
 
 <script>
+import staticHolidays from './holiday'
+import floatingHolidays from './special'
 export default {
   data() {
     return {
