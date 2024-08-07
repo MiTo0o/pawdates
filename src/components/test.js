@@ -48,11 +48,6 @@ export default class petHoli {
     for (const [key, holiday] of Object.entries(floatingHolidays)) {
       const [holMonth, holWeek, holDay] = key.split('/').map(Number)
       const holidayDate = this.getDate(year, holMonth, holWeek, holDay)
-      //   console.log(
-      //     key,
-      //     holidayDate.getDate(),
-      //     holidayDate.toLocaleString('default', { month: 'long' })
-      //   )
       if (holidayDate.getDate() === day && holidayDate.getMonth() === month - 1) {
         if (Array.isArray(holiday)) {
           holidays.push(...holiday) // Spread operator to push all elements of the array
@@ -76,13 +71,4 @@ export default class petHoli {
       return holidays
     }
   }
-
-  //   // Example usage:
-  //   const today = new Date()
-  //   const holiday = isTodayHoliday(today.getFullYear(), today.getMonth(), today.getDate())
-  //   if (holiday) {
-  //     console.log(`Today is ${holiday}`)
-  //   } else {
-  //     console.log('Today is not a holiday')
-  //   }
 }

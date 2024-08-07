@@ -1,5 +1,5 @@
 const floatingHolidays = {
-  // keys are formatted as month, week, day (0 index)
+  // keys are formatted as month, week (-1 means last week of month), day (0 index)
   '1/-1/1': 'World Spay Day',
   '3/0/5': 'Every Day is Tag Day',
   '3/-1/2': 'International Guide Dog Day',

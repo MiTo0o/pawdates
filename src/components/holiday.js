@@ -93,7 +93,6 @@ const staticHolidays = {
   '7/31': 'National Mutt Day',
   '8/1': ['DOGust Universal Birthday for Shelter Dogs', 'National Yorkie Day'],
   '8/4': 'Assistance Dog Day',
-  '8/6': 'Fresh Breath Day',
   '8/8': 'International Cat Day',
   '8/10': 'Spoil Your Dog Day',
   '8/14': 'World Lizard Day',
