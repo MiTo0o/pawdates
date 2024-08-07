@@ -1,9 +1,14 @@
 <template>
   <div class="clock-container green">
     <div class="clock">
-      <div class="time">{{ time }}</div>
-      <div class="date">{{ date }}</div>
-      <div class="timezone">{{ timezone }}</div>
+      <div class="time-container">
+        <catEarsIcon class="catEars-svg" />
+        <div class="time">{{ time }}</div>
+      </div>
+      <div class="date-container">
+        <div class="date">{{ date }}</div>
+        <catToyIcon class="catToy-svg" />
+      </div>
       <div class="message">{{ message }}</div>
     </div>
   </div>
@@ -14,7 +19,13 @@
 // import floatingHolidays from './special'
 import petHoli from './test.js'
 import messages from './messages.js'
+import catEarsIcon from './icons/catEars.svg'
+import catToyIcon from './icons/catToy.svg'
 export default {
+  components: {
+    catEarsIcon,
+    catToyIcon
+  },
   data() {
     return {
       time: '',
@@ -67,6 +78,7 @@ export default {
 .clock-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   padding-top: 20px;
@@ -80,9 +92,52 @@ export default {
   line-height: 1.5em;
 }
 
+.time-container {
+  position: relative;
+  display: inline-block;
+}
+
 .time {
+  position: relative;
   font-weight: bold;
   font-size: 1.5em;
+  z-index: 1;
+}
+
+.catEars-svg {
+  position: absolute;
+  top: -1em; /* Adjust based on your needs */
+  right: 0.2em;
+  width: 1.8em; /* Adjust to scale the SVG */
+  height: 1.5em; /* Ensure the SVG has height */
+  z-index: 0;
+  fill: aqua;
+}
+
+.date-container {
+  position: relative;
+  display: block;
+  margin-bottom: 1em;
+  /* width: 100%;
+  box-sizing: border-box;
+  overflow: visible; */
+}
+
+.date {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.5em;
+  z-index: 1;
+}
+
+.catToy-svg {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  width: 1em;
+  height: auto;
+  z-index: 0;
+  fill: aqua;
 }
 
 .date,
